@@ -3,7 +3,6 @@
 import React from "react";
 import { useState, useEffect, useMemo } from "react";
 import { Loader2, Users } from "lucide-react";
-import StarBorder from "@/components/ui/StarBorder";
 
 interface EntourageMember {
   Name: string;
@@ -17,7 +16,7 @@ const ROLE_CATEGORY_ORDER = [
   "Parents of the Groom",
   "Parents of the Bride",
   "Best Man",
-  "Maid of Honor",
+  "Maid/Matron of Honor",
   "Candle Sponsors",
   "Veil Sponsors",
   "Cord Sponsors",
@@ -34,16 +33,20 @@ export function Entourage() {
 
   const fetchEntourage = async () => {
     setIsLoading(true);
+    setError(null);
     try {
       const response = await fetch("/api/entourage", { cache: "no-store" });
+      const data = await response.json();
       if (!response.ok) {
-        throw new Error("Failed to fetch entourage");
+        throw new Error((data?.error as string) || "Failed to fetch entourage");
       }
-      const data: EntourageMember[] = await response.json();
-      setEntourage(data);
-    } catch (error: any) {
+      // API returns an array; guard in case of unexpected shape
+      const list = Array.isArray(data) ? data : [];
+      setEntourage(list);
+    } catch (error: unknown) {
       console.error("Failed to load entourage:", error);
-      setError(error?.message || "Failed to load entourage");
+      setError(error instanceof Error ? error.message : "Failed to load entourage");
+      setEntourage([]);
     } finally {
       setIsLoading(false);
     }
@@ -66,19 +69,24 @@ export function Entourage() {
     };
   }, []);
 
-  // Group entourage by role category
+  // Map common spreadsheet category variants to display categories
+  const normalizeCategory = (raw: string): string => {
+    const s = (raw || "").trim();
+    if (/maid(\s*\/?\s*matron)?\s+of\s+honor/i.test(s)) return "Maid/Matron of Honor";
+    if (/ring\s*bearer/i.test(s) || /coin\s*bearer/i.test(s)) return "Ring/Coin Bearers";
+    return s || "Other";
+  };
+
+  // Group entourage by role category (guard against non-array)
   const grouped = useMemo(() => {
-    const grouped: Record<string, EntourageMember[]> = {};
-
-    entourage.forEach((member) => {
-      const category = member.RoleCategory || "Other";
-      if (!grouped[category]) {
-        grouped[category] = [];
-      }
-      grouped[category].push(member);
+    const result: Record<string, EntourageMember[]> = {};
+    const list = Array.isArray(entourage) ? entourage : [];
+    list.forEach((member) => {
+      const category = normalizeCategory(member.RoleCategory || "Other");
+      if (!result[category]) result[category] = [];
+      result[category].push(member);
     });
-
-    return grouped;
+    return result;
   }, [entourage]);
 
   // Helper component for elegant section titles
@@ -204,27 +212,21 @@ export function Entourage() {
       className="relative py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden bg-transparent"
     >
 
-      {/* Section Header — soft dark overlay for white text readability */}
+      {/* Section Header */}
       <div className="relative z-10 text-center mb-6 sm:mb-10 md:mb-12 px-3 sm:px-4 md:px-6">
-        <div className="relative max-w-xl mx-auto rounded-2xl py-6 sm:py-8 px-6 sm:px-8" style={{ background: "rgba(0,0,0,0.3)" }}>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-semibold text-white mb-3 sm:mb-4 md:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em]" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
-            Wedding Entourage
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-white font-light max-w-xl mx-auto leading-relaxed tracking-wide px-2 sm:px-4" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}>
-            Our cherished family
-          </p>
-        </div>
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-semibold text-[#C68484] mb-3 sm:mb-4 md:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em]">
+          Wedding Entourage
+        </h2>
+
+        <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] font-light max-w-xl mx-auto leading-relaxed tracking-wide px-2 sm:px-4">
+          Our cherished family and friends
+        </p>
       </div>
 
       {/* Central Card Container */}
       <div className="relative z-10 max-w-5xl mx-auto px-3 sm:px-4 md:px-6">
         {/* Main card with elegant styling */}
-        <StarBorder
-          as="div"
-          className="relative group w-full"
-          color="#D4AF37"
-          speed="5s"
-        >
+        <div className="relative group">
           <div 
             className="relative rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300"
             style={{
@@ -232,6 +234,7 @@ export function Entourage() {
               boxShadow: '0 0 0 1px rgba(212,175,55,0.2), 0 8px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.3)',
             }}
           >
+            {/* Gradient overlays */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#F7E7CE] via-[#EADBC8] to-[#F8D0B8] z-0" />
             <div 
               className="absolute inset-0 opacity-60 z-0"
@@ -240,6 +243,7 @@ export function Entourage() {
               }}
             />
             
+            {/* Elegant border */}
             <div className="absolute inset-[1px] rounded-xl sm:rounded-2xl border border-[#D4AF37]/40 group-hover:border-[#D4AF37]/60 transition-colors z-0" />
             {/* Card content */}
             <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-10">
@@ -247,7 +251,7 @@ export function Entourage() {
                 <div className="flex items-center justify-center py-12 sm:py-16 md:py-24">
                   <div className="flex flex-col items-center gap-3 sm:gap-4">
                     <Loader2 className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 animate-spin text-[#C68484]" />
-                    <span className="text-[#C68484]/90 font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg">
+                    <span className="text-[#7A3E3E] font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg">
                       Loading entourage...
                     </span>
                   </div>
@@ -412,13 +416,13 @@ export function Entourage() {
                       return null;
                     }
 
-                    // Special handling for Maid of Honor and Best Man - combine into single two-column layout
+                    // Special handling for Maid/Matron of Honor and Best Man - combine into single two-column layout
                     if (
-                      category === "Maid of Honor" ||
+                      category === "Maid/Matron of Honor" ||
                       category === "Best Man"
                     ) {
                       // Get both honor attendant groups
-                      const maidOfHonor = grouped["Maid of Honor"] || [];
+                      const maidOfHonor = grouped["Maid/Matron of Honor"] || [];
                       const bestMan = grouped["Best Man"] || [];
 
                       // Only render once (when processing "Best Man")
@@ -434,7 +438,7 @@ export function Entourage() {
                             )}
                             <TwoColumnLayout
                               leftTitle="Best Man"
-                              rightTitle="Maid of Honor"
+                              rightTitle="Maid/Matron of Honor"
                             >
                               {(() => {
                                 const maxLen = Math.max(
@@ -482,7 +486,7 @@ export function Entourage() {
                           </div>
                         );
                       }
-                      // Skip rendering for "Maid of Honor" since it's already rendered above
+                      // Skip rendering for "Maid/Matron of Honor" since it's already rendered above
                       return null;
                     }
 
@@ -651,7 +655,7 @@ export function Entourage() {
                           {(() => {
                             const SINGLE_COLUMN_SECTIONS = new Set([
                               "Best Man",
-                              "Maid of Honor",
+                              "Maid/Matron of Honor",
                               "Ring Bearer",
                               "Coin Bearer",
                               "Bible Bearer",
@@ -813,7 +817,7 @@ export function Entourage() {
               )}
             </div>
           </div>
-        </StarBorder>
+        </div>
       </div>
     </section>
   );

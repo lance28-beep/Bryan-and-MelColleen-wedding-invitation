@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
 
 // Replace this with your Entourage Google Apps Script URL
-const ENTOURAGE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwGArfZOjFe2k35ZIAJV1IJWgoQKLpMQsdKFuopo0xtrUWzR2MOys6VRHbwPrLmZeaA7Q/exec'
+const ENTOURAGE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyWyKtaSrnzcSSrV4B1Zf0h_3K7NkBltcBmqf2t7zi7X1VSIMde7gSuqIZa0ftZryafHw/exec'
 
 // Entourage interface
 export interface Entourage {
@@ -9,6 +9,18 @@ export interface Entourage {
   RoleCategory: string
   RoleTitle: string
   Email: string
+}
+
+// Normalize script response to an array of entourage members
+function toEntourageArray(data: unknown): Entourage[] {
+  if (Array.isArray(data)) return data as Entourage[]
+  if (data && typeof data === 'object') {
+    const obj = data as Record<string, unknown>
+    if (Array.isArray(obj.data)) return obj.data as Entourage[]
+    if (Array.isArray(obj.entourage)) return obj.entourage as Entourage[]
+    if (Array.isArray(obj.rows)) return obj.rows as Entourage[]
+  }
+  return []
 }
 
 // GET: Fetch all entourage
@@ -21,12 +33,17 @@ export async function GET() {
       },
     })
 
+    const data = await response.json()
+
     if (!response.ok) {
-      throw new Error('Failed to fetch entourage')
+      return NextResponse.json(
+        { error: (data && (data as { error?: string }).error) || 'Failed to fetch entourage' },
+        { status: response.status }
+      )
     }
 
-    const data = await response.json()
-    return NextResponse.json(data, { status: 200 })
+    const list = toEntourageArray(data)
+    return NextResponse.json(list, { status: 200 })
   } catch (error) {
     console.error('Error fetching entourage:', error)
     return NextResponse.json(
