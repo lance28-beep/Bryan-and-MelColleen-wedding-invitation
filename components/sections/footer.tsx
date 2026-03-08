@@ -23,8 +23,8 @@ export function Footer() {
       className="relative z-20 mt-16 overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, #0D1C7A 0%, #0E228C 40%, #0F299F 100%)",
-        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
+          "linear-gradient(180deg, #F7E7CE 0%, #EADBC8 50%, #F8D0B8 100%)",
+        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.4), 0 -4px 24px rgba(198,132,132,0.08)",
       }}
     >
       <div className="relative max-w-7xl mx-auto px-4 md:px-8 py-16">
@@ -37,74 +37,75 @@ export function Footer() {
             {/* Monogram – same as hero */}
             <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
               <div
-                className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72 bg-gradient-to-br from-[#FFD700] to-[#EFBF04]"
+                className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72"
                 style={{
-                  maskImage: 'url("/monogram/newMonogram.png")',
-                  WebkitMaskImage: 'url("/monogram/newMonogram.png")',
+                  maskImage: 'url("/monogram/monogram.png")',
+                  WebkitMaskImage: 'url("/monogram/monogram.png")',
                   maskSize: "contain",
                   WebkitMaskSize: "contain",
                   maskRepeat: "no-repeat",
                   WebkitMaskRepeat: "no-repeat",
                   maskPosition: "center",
                   WebkitMaskPosition: "center",
+                  background: "linear-gradient(135deg, #D4AF37 0%, #C68484 50%, #D4AF37 100%)",
                 }}
               />
             </div>
 
-            {/* Fine divider – hero style */}
+            {/* Fine divider */}
             <div className="mb-6 sm:mb-7 md:mb-8 flex justify-center">
-              <div className="h-px w-24 sm:w-32 md:w-40 bg-gradient-to-r from-transparent via-zinc-600 to-transparent" />
+              <div className="h-px w-24 sm:w-32 md:w-40 bg-gradient-to-r from-transparent via-[#D4AF37]/60 to-transparent" />
             </div>
 
-            {/* Date + time block – hero structure */}
+            {/* Date + time block */}
             <div className="mb-7 sm:mb-9 md:mb-10">
-              <p className="text-[11px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.38em] text-zinc-400 uppercase mb-4 sm:mb-5">
-                February
+              <p className="text-[11px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.38em] text-[#C68484]/90 uppercase mb-4 sm:mb-5">
+                April
               </p>
               <div className="flex items-center justify-center gap-6 sm:gap-10 md:gap-14 mb-3 sm:mb-4">
-                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
-                  Thursday
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-[#C68484]/80 uppercase">
+                  Sunday
                 </p>
-                <p className="text-4xl sm:text-5xl md:text-[3.25rem] font-[family-name:var(--font-crimson)] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] leading-none">
-                  26
+                <p className="text-4xl sm:text-5xl md:text-[3.25rem] font-[family-name:var(--font-crimson)] text-[#C68484] leading-none font-semibold">
+                  19
                 </p>
-                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
-                  At 2:00 PM
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-[#C68484]/80 uppercase">
+                  At 4:30 PM
                 </p>
               </div>
-              <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-400 uppercase">
+              <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.3em] text-[#C68484]/90 uppercase">
                 2026
               </p>
             </div>
 
-            {/* Fine divider – hero style */}
+            {/* Fine divider */}
             <div className="mt-6 sm:mt-7 md:mt-8 mb-6 sm:mb-7 flex justify-center">
-              <div className="h-px w-24 sm:w-32 md:w-40 bg-gradient-to-r from-transparent via-zinc-600 to-transparent" />
+              <div className="h-px w-24 sm:w-32 md:w-40 bg-gradient-to-r from-transparent via-[#D4AF37]/60 to-transparent" />
             </div>
 
-            {/* Location block – hero content */}
+            {/* Location block */}
             <div className="space-y-6 sm:space-y-8 md:space-y-10">
               <div className="space-y-2 sm:space-y-3">
-                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-[#C68484]/80 uppercase">
                   Ceremony
                 </p>
-                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase">
-                  Municipal Trial Court
+                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-[#7A3E3E] uppercase font-semibold">
+                  Nature&apos;s Village Resort - East Garden
                 </p>
-                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">
-                  Prosperidad, Agusan del Sur
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-[#C68484]/90 uppercase">
+                  Talisay City, Negros Occidental
                 </p>
               </div>
 
               <div className="space-y-2 sm:space-y-3">
-                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-[#C68484]/80 uppercase">
                   Reception
                 </p>
-                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase">
-                  RCBI Hotel, National Highway, San Isidro
+                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-[#7A3E3E] uppercase font-semibold">
+                  Nature&apos;s Village Resort - Padre Pio B Function Hall
                 </p>
-                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">
-                  San Francisco, Agusan del Sur
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-[#C68484]/90 uppercase">
+                  Talisay City, Negros Occidental
                 </p>
               </div>
             </div>
@@ -148,38 +149,38 @@ export function Footer() {
 
         {/* Bottom Row */}
         <motion.div
-          className="border-t border-white/10 pt-8"
+          className="border-t border-[#D4AF37]/40 pt-8"
           variants={fadeInUp}
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <p className="text-zinc-300 font-[family-name:var(--font-crimson)] text-sm sm:text-base font-semibold">
-                © {year} Kent & Mara. All rights reserved.
+              <p className="text-[#7A3E3E] font-[family-name:var(--font-crimson)] text-sm sm:text-base font-semibold">
+                © {year} Bryan & Mel Colleen. All rights reserved.
               </p>
-              <p className="text-zinc-400 font-[family-name:var(--font-crimson)] text-sm sm:text-base mt-1 font-medium">
+              <p className="text-[#C68484]/90 font-[family-name:var(--font-crimson)] text-sm sm:text-base mt-1 font-medium">
                 Made with 💕 for our special day
               </p>
             </div>
 
             <div className="text-center md:text-right space-y-1">
-              <p className="text-zinc-400 font-[family-name:var(--font-crimson)] text-xs sm:text-sm font-medium">
+              <p className="text-[#7A3E3E] font-[family-name:var(--font-crimson)] text-xs sm:text-sm font-medium">
                 Developed by{" "}
                 <a
                   href="https://lance28-beep.github.io/portfolio-website/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-200 hover:text-zinc-100 transition-colors duration-200 underline decoration-zinc-500 hover:decoration-zinc-300 font-semibold"
+                  className="text-[#C68484] hover:text-[#7A3E3E] transition-colors duration-200 underline decoration-[#D4AF37]/60 hover:decoration-[#D4AF37] font-semibold"
                 >
                   Lance Valle
                 </a>
               </p>
-              <p className="text-zinc-400 font-[family-name:var(--font-crimson)] text-xs sm:text-sm font-medium">
+              <p className="text-[#7A3E3E] font-[family-name:var(--font-crimson)] text-xs sm:text-sm font-medium">
                 Want a website like this? Visit{" "}
                 <a
                   href="https://www.facebook.com/WeddingInvitationNaga"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-200 hover:text-zinc-100 transition-colors duration-200 underline decoration-zinc-500 hover:decoration-zinc-300 font-semibold"
+                  className="text-[#C68484] hover:text-[#7A3E3E] transition-colors duration-200 underline decoration-[#D4AF37]/60 hover:decoration-[#D4AF37] font-semibold"
                 >
                   Wedding Invitation Naga
                 </a>

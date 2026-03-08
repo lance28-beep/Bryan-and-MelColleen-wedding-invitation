@@ -122,15 +122,16 @@ export function BookOfGuests() {
 
   return (
     <Section id="guests" className="relative z-0 py-16 sm:py-20 md:py-24 lg:py-28">
-      {/* Section Header */}
+      {/* Section Header — soft dark overlay for white text readability */}
       <div className="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4 sm:px-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
-          Book of Guests
-        </h2>
-
-        <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-400 font-light max-w-xl mx-auto leading-relaxed tracking-wide px-4">
-          See who's celebrating with us on our special day
-        </p>
+        <div className="relative max-w-xl mx-auto rounded-2xl py-6 sm:py-8 px-6 sm:px-8" style={{ background: "rgba(0,0,0,0.3)" }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-semibold text-white mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
+            Book of Guests
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-white font-light max-w-xl mx-auto leading-relaxed tracking-wide px-4" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}>
+            See who's celebrating with us on our special day
+          </p>
+        </div>
       </div>
 
       {/* Guests content */}
@@ -141,38 +142,36 @@ export function BookOfGuests() {
             <div 
               className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
-                boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
+                background: 'linear-gradient(135deg, #F7E7CE 0%, #EADBC8 50%, #F8D0B8 100%)',
+                boxShadow: '0 0 0 1px rgba(212,175,55,0.2), 0 8px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.3)',
               }}
             >
-              {/* Gradient overlays */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#F7E7CE] via-[#EADBC8] to-[#F8D0B8] z-0" />
               <div 
                 className="absolute inset-0 opacity-60 z-0"
                 style={{
-                  background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)',
+                  background: 'radial-gradient(circle at center, rgba(246,193,199,0.15) 0%, transparent 70%)',
                 }}
               />
-              <div className="absolute inset-0 border border-white/10 rounded-xl sm:rounded-2xl z-0" />
+              <div className="absolute inset-0 border border-[#D4AF37]/40 rounded-xl sm:rounded-2xl z-0" />
               
-              {/* Content */}
               <div className="relative z-10">
                 <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-5">
-                  <div className="bg-[#0F299F]/50 p-1.5 sm:p-2 md:p-2.5 rounded-full shadow-lg border border-white/10">
-                    <Heart className="text-zinc-200 h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
+                  <div className="bg-[#EADBC8]/80 p-1.5 sm:p-2 md:p-2.5 rounded-full shadow-lg border border-[#D4AF37]/30">
+                    <Heart className="text-[#C68484] h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
                   </div>
                   <div className="flex flex-col items-center">
-                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04]">
+                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-[#C68484]">
                       {totalGuests} {totalGuests === 1 ? "Guest" : "Guests"}{" "}
                       Celebrating With Us
                     </h3>
-                    <p className="text-[10px] sm:text-xs md:text-sm text-zinc-400 font-[family-name:var(--font-crimson)] mt-0.5 sm:mt-1">
+                    <p className="text-[10px] sm:text-xs md:text-sm text-[#C68484]/80 font-[family-name:var(--font-crimson)] mt-0.5 sm:mt-1">
                       {guests.length}{" "}
                       {guests.length === 1 ? "RSVP entry" : "RSVP entries"}
                     </p>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-300 font-[family-name:var(--font-crimson)] leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-[#7A3E3E] font-[family-name:var(--font-crimson)] leading-relaxed">
                   Thank you for confirming your RSVP! Your presence means the
                   world to us.
                 </p>
@@ -187,26 +186,25 @@ export function BookOfGuests() {
             <div 
               className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-300 overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
-                boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
+                background: 'linear-gradient(135deg, #F7E7CE 0%, #EADBC8 50%, #F8D0B8 100%)',
+                boxShadow: '0 0 0 1px rgba(212,175,55,0.2), 0 8px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.3)',
               }}
             >
-              {/* Gradient overlays */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#F7E7CE] via-[#EADBC8] to-[#F8D0B8] z-0" />
               <div 
                 className="absolute inset-0 opacity-60 z-0"
                 style={{
-                  background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)',
+                  background: 'radial-gradient(circle at center, rgba(246,193,199,0.15) 0%, transparent 70%)',
                 }}
               />
-              <div className="absolute inset-0 border border-white/10 rounded-xl sm:rounded-2xl z-0" />
+              <div className="absolute inset-0 border border-[#D4AF37]/40 rounded-xl sm:rounded-2xl z-0" />
               
               <div className="relative z-10">
                 {isLoading ? (
                   <div className="flex items-center justify-center py-16 sm:py-20 md:py-24">
                     <div className="flex flex-col items-center gap-3 sm:gap-4">
-                      <Loader2 className="h-10 w-10 sm:h-12 sm:w-12 animate-spin text-zinc-300" />
-                      <span className="text-zinc-400 font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg">
+                      <Loader2 className="h-10 w-10 sm:h-12 sm:w-12 animate-spin text-[#C68484]" />
+                      <span className="text-[#7A3E3E] font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg">
                         Loading guests...
                       </span>
                     </div>
@@ -223,13 +221,13 @@ export function BookOfGuests() {
                 ) : guests.length === 0 ? (
                   <div className="flex items-center justify-center py-16 sm:py-20 md:py-24">
                     <div className="text-center">
-                      <div className="bg-[#0F299F]/50 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 border border-white/10">
-                        <Heart className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-zinc-200" />
+                      <div className="bg-[#EADBC8]/80 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 border border-[#D4AF37]/30">
+                        <Heart className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-[#C68484]" />
                       </div>
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 mb-2">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-[#C68484] mb-2">
                         No guests have RSVP'd yet
                       </h3>
-                      <p className="text-xs sm:text-sm md:text-base text-zinc-400 font-[family-name:var(--font-crimson)] max-w-md mx-auto leading-relaxed">
+                      <p className="text-xs sm:text-sm md:text-base text-[#7A3E3E] font-[family-name:var(--font-crimson)] max-w-md mx-auto leading-relaxed">
                         Be the first to RSVP and kick off the celebration!
                       </p>
                     </div>
@@ -244,7 +242,7 @@ export function BookOfGuests() {
                       {getVisibleGuests().map((guest, index) => (
                         <div
                           key={`${guest.Name}-${currentIndex}-${index}`}
-                          className="group relative bg-[#0F299F]/20 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-black/20 animate-roll-up"
+                          className="group relative bg-[#EADBC8]/60 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-[#D4AF37]/40 hover:border-[#D4AF37]/60 transition-all duration-300 hover:shadow-lg hover:shadow-black/10 animate-roll-up"
                           style={{
                             animationDelay: `${index * 120}ms`,
                             backfaceVisibility: 'hidden',
@@ -253,7 +251,7 @@ export function BookOfGuests() {
                           <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4">
                             {/* Avatar */}
                             <div className="relative h-9 w-9 sm:h-11 sm:w-11 md:h-12 md:w-12 flex-shrink-0">
-                              <div className="h-full w-full rounded-full bg-[#0D1C7A] text-zinc-200 flex items-center justify-center font-[family-name:var(--font-crimson)] font-semibold shadow-md ring-2 ring-white/10 text-xs sm:text-sm md:text-base border border-white/10">
+                              <div className="h-full w-full rounded-full bg-[#F6C1C7]/80 text-[#7A3E3E] flex items-center justify-center font-[family-name:var(--font-crimson)] font-semibold shadow-md ring-2 ring-[#D4AF37]/30 text-xs sm:text-sm md:text-base border border-[#D4AF37]/40">
                                 {getInitials(guest.Name)}
                               </div>
                             </div>
@@ -262,12 +260,12 @@ export function BookOfGuests() {
                             <div className="flex-1 min-w-0">
                               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3">
                                 <div className="flex-1 pr-12 sm:pr-0">
-                                  <h4 className="font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg font-semibold text-zinc-200 mb-0.5 sm:mb-1 group-hover:text-zinc-100 transition-colors duration-200">
+                                  <h4 className="font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg font-semibold text-[#7A3E3E] mb-0.5 sm:mb-1 group-hover:text-[#C68484] transition-colors duration-200">
                                     {guest.Name}
                                   </h4>
                                   {guest.Email && guest.Email !== "Pending" && (
-                                    <div className="flex items-center text-[10px] sm:text-xs md:text-sm text-zinc-400">
-                                      <Mail className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 mr-1 sm:mr-1.5 text-zinc-400 flex-shrink-0" />
+                                    <div className="flex items-center text-[10px] sm:text-xs md:text-sm text-[#C68484]/80">
+                                      <Mail className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 mr-1 sm:mr-1.5 text-[#C68484]/80 flex-shrink-0" />
                                       <span className="font-[family-name:var(--font-crimson)] break-all">
                                         {guest.Email}
                                       </span>
@@ -276,8 +274,8 @@ export function BookOfGuests() {
                                 </div>
                                 {/* Guest count badge */}
                                 <div className="absolute right-2.5 top-2.5 sm:static sm:right-auto sm:top-auto flex items-center gap-1 sm:gap-1.5">
-                                  <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-zinc-400 flex-shrink-0" />
-                                  <span className="inline-flex items-center justify-center px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 bg-[#0D1C7A]/80 text-zinc-200 rounded-full text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-semibold border border-white/10">
+                                  <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#C68484]/80 flex-shrink-0" />
+                                  <span className="inline-flex items-center justify-center px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 bg-[#F6C1C7]/60 text-[#7A3E3E] rounded-full text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-semibold border border-[#D4AF37]/40">
                                     {guest.Guest
                                       ? parseInt(String(guest.Guest)) || 1
                                       : 1}{" "}
@@ -290,10 +288,10 @@ export function BookOfGuests() {
 
                               {/* Message */}
                               {guest.Message && (
-                                <div className="mt-2.5 sm:mt-3 md:mt-4 pt-2.5 sm:pt-3 md:pt-4 border-t border-white/10">
+                                <div className="mt-2.5 sm:mt-3 md:mt-4 pt-2.5 sm:pt-3 md:pt-4 border-t border-[#D4AF37]/30">
                                   <div className="flex items-start gap-2 sm:gap-2.5 md:gap-3">
-                                    <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-zinc-400 flex-shrink-0 mt-0.5" />
-                                    <p className="text-[10px] sm:text-xs md:text-sm text-zinc-300 font-[family-name:var(--font-crimson)] leading-relaxed italic flex-1">
+                                    <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#C68484]/80 flex-shrink-0 mt-0.5" />
+                                    <p className="text-[10px] sm:text-xs md:text-sm text-[#7A3E3E] font-[family-name:var(--font-crimson)] leading-relaxed italic flex-1">
                                       "{guest.Message}"
                                     </p>
                                   </div>
@@ -322,8 +320,8 @@ export function BookOfGuests() {
                               }}
                               className={`h-2 rounded-full transition-all duration-300 ${
                                 pageIndex === idx
-                                  ? 'w-8 bg-zinc-300'
-                                  : 'w-2 bg-zinc-600 hover:bg-zinc-500'
+                                  ? 'w-8 bg-[#C68484]'
+                                  : 'w-2 bg-[#C68484]/40 hover:bg-[#C68484]/60'
                               }`}
                               aria-label={`Go to page ${idx + 1}`}
                             />

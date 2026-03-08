@@ -19,36 +19,36 @@ export function Hero() {
           className={`w-full max-w-xl md:max-w-2xl relative rounded-[22px] sm:rounded-[26px] md:rounded-[30px] transition-all duration-700 ease-out overflow-hidden ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
-          color="cyan"
+          color="#D4AF37"
           speed="5s"
         >
         <div
           className="h-full w-full rounded-[22px] sm:rounded-[26px] md:rounded-[30px] text-center px-6 sm:px-10 md:px-14 py-10 sm:py-12 md:py-14"
           style={{
-            background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
-            boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
+            background: 'linear-gradient(135deg, #F7E7CE 0%, #EADBC8 50%, #F8D0B8 100%)',
+            boxShadow: '0 0 0 1px rgba(212,175,55,0.2), 0 8px 32px rgba(0,0,0,0.15), 0 30px 90px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)',
           }}
         >
-          {/* Premium blue base with elegant gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F]" />
+          {/* Champagne/Peach gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F7E7CE] via-[#EADBC8] to-[#F8D0B8]" />
           
           {/* Subtle radial gradient for depth */}
           <div 
             className="absolute inset-0 opacity-60"
             style={{
-              background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)',
+              background: 'radial-gradient(circle at center, rgba(246,193,199,0.15) 0%, transparent 70%)',
             }}
           />
           
-          {/* Elegant shimmer gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[rgba(255,255,255,0.01)] to-transparent opacity-50" />
+          {/* Elegant shimmer overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[rgba(255,255,255,0.08)] to-transparent opacity-50" />
           
-          {/* Elegant border with gradient */}
+          {/* Elegant border — Soft Gold subtle accent */}
           <div 
             className="absolute inset-0 rounded-[22px] sm:rounded-[26px] md:rounded-[30px]"
             style={{
               padding: '1px',
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.1) 100%)',
+              background: 'linear-gradient(135deg, rgba(212,175,55,0.4) 0%, rgba(212,175,55,0.15) 50%, rgba(212,175,55,0.3) 100%)',
               WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
               WebkitMaskComposite: 'xor',
               maskComposite: 'exclude',
@@ -56,17 +56,18 @@ export function Hero() {
           />
           
           {/* Inner border for refinement */}
-          <div className="absolute inset-[1px] rounded-[21px] sm:rounded-[25px] md:rounded-[29px] border border-[rgba(255,255,255,0.08)]" />
+          <div className="absolute inset-[1px] rounded-[21px] sm:rounded-[25px] md:rounded-[29px] border border-[#D4AF37]/25" />
           
           {/* Content wrapper */}
           <div className="relative z-10">
             {/* Monogram */}
             <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
               <div
-                className="h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 bg-gradient-to-br from-[#FFD700] to-[#EFBF04]"
+                className="h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48"
                 style={{
-                  maskImage: 'url("/monogram/newMonogram.png")',
-                  WebkitMaskImage: 'url("/monogram/newMonogram.png")',
+                  background: 'linear-gradient(135deg, #C68484 0%, #F6C1C7 100%)',
+                  maskImage: 'url("/monogram/monogram.png")',
+                  WebkitMaskImage: 'url("/monogram/monogram.png")',
                   maskSize: "contain",
                   WebkitMaskSize: "contain",
                   maskRepeat: "no-repeat",
@@ -78,7 +79,7 @@ export function Hero() {
             </div>
 
             {/* Small intro text */}
-            <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-zinc-400 uppercase mb-6 sm:mb-7">
+            <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-[#C68484] uppercase mb-6 sm:mb-7">
               Together with their families
             </p>
 
@@ -86,48 +87,48 @@ export function Hero() {
             <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6 sm:mb-7 md:mb-8">
               {/* Groom */}
               <div className="space-y-1">
-                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase">
-                  Kent
+                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-[#C68484] uppercase">
+                  Bryan
                 </p>
               </div>
 
               {/* AND */}
-              <p className="text-[10px] sm:text-xs tracking-[0.3em] font-[family-name:var(--font-crimson)] text-zinc-500 uppercase">
+              <p className="text-[10px] sm:text-xs tracking-[0.3em] font-[family-name:var(--font-crimson)] text-[#C68484]/80 uppercase">
                 and
               </p>
 
               {/* Bride */}
               <div className="space-y-1">
-                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase">
-                  Mara
+                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-[#C68484] uppercase">
+                  Mel Colleen
                 </p>
               </div>
             </div>
 
           {/* Invite line */}
-          <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-zinc-400 uppercase mb-6 sm:mb-7">
+          <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-[#C68484] uppercase mb-6 sm:mb-7">
             warmly invite you to celebrate their marriage
           </p>
 
-          {/* Fine divider before invitation message */}
+          {/* Fine divider — Soft Gold subtle accent */}
           <div className="mt-6 sm:mt-7 md:mt-8 mb-6 sm:mb-7 flex justify-center">
-            <div className="h-px w-24 sm:w-32 md:w-40 bg-gradient-to-r from-transparent via-zinc-600 to-transparent" />
+            <div className="h-px w-24 sm:w-32 md:w-40 bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent" />
           </div>
 
           {/* Invitation message */}
           <div className="space-y-4 sm:space-y-5 md:space-y-6 max-w-md mx-auto">
-            <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed italic">
+            <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#C68484]/95 leading-relaxed italic">
               With hearts full of love and joy,
               we invite you to join us for an intimate celebration
               as we unite our lives in marriage,
               placing God at the center of our union.
             </p>
-            <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed italic">
+            <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#C68484]/95 leading-relaxed italic">
               By His grace our paths have been woven together,
               and in His presence we vow to walk side by side,
               guided by faith, love, and devotion.
             </p>
-            <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed italic">
+            <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#C68484]/95 leading-relaxed italic">
               Your presence will be a blessing,
               adding warmth to a day that is both
               a celebration of love and a testimony of His goodness.

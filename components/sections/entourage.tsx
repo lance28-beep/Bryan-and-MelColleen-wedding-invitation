@@ -99,7 +99,7 @@ export function Entourage() {
           : "text-center";
     return (
       <h3
-        className={`text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-2 sm:mb-3 md:mb-4 tracking-[0.1em] sm:tracking-[0.12em] ${textAlign} ${className}`}
+        className={`text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold uppercase text-[#C68484] mb-2 sm:mb-3 md:mb-4 tracking-[0.1em] sm:tracking-[0.12em] ${textAlign} ${className}`}
       >
         {children}
       </h3>
@@ -133,13 +133,13 @@ export function Entourage() {
         className={`flex flex-col ${containerAlign} justify-center py-0.5 sm:py-1 md:py-1.5 leading-tight sm:leading-relaxed`}
       >
         <p
-          className={`text-zinc-200 text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-medium ${textAlign}`}
+          className={`text-[#7A3E3E] text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-medium ${textAlign}`}
         >
           {member.Name}
         </p>
         {showRole && member.RoleTitle && (
           <p
-            className={`text-zinc-400 text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-normal mt-0.5 sm:mt-1 leading-tight sm:leading-snug ${textAlign}`}
+            className={`text-[#C68484]/90 text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-normal mt-0.5 sm:mt-1 leading-tight sm:leading-snug ${textAlign}`}
           >
             {member.RoleTitle}
           </p>
@@ -204,15 +204,16 @@ export function Entourage() {
       className="relative py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden bg-transparent"
     >
 
-      {/* Section Header */}
+      {/* Section Header — soft dark overlay for white text readability */}
       <div className="relative z-10 text-center mb-6 sm:mb-10 md:mb-12 px-3 sm:px-4 md:px-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-3 sm:mb-4 md:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em]">
-          Wedding Entourage
-        </h2>
-
-        <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-400 font-light max-w-xl mx-auto leading-relaxed tracking-wide px-2 sm:px-4">
-          Our cherished family
-        </p>
+        <div className="relative max-w-xl mx-auto rounded-2xl py-6 sm:py-8 px-6 sm:px-8" style={{ background: "rgba(0,0,0,0.3)" }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-semibold text-white mb-3 sm:mb-4 md:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em]" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}>
+            Wedding Entourage
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-white font-light max-w-xl mx-auto leading-relaxed tracking-wide px-2 sm:px-4" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}>
+            Our cherished family
+          </p>
+        </div>
       </div>
 
       {/* Central Card Container */}
@@ -221,45 +222,32 @@ export function Entourage() {
         <StarBorder
           as="div"
           className="relative group w-full"
-          color="#FFD700"
+          color="#D4AF37"
           speed="5s"
         >
           <div 
             className="relative rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300"
             style={{
-              background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
-              boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
+              background: 'linear-gradient(135deg, #F7E7CE 0%, #EADBC8 50%, #F8D0B8 100%)',
+              boxShadow: '0 0 0 1px rgba(212,175,55,0.2), 0 8px 32px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.3)',
             }}
           >
-            {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#F7E7CE] via-[#EADBC8] to-[#F8D0B8] z-0" />
             <div 
               className="absolute inset-0 opacity-60 z-0"
               style={{
-                background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)',
+                background: 'radial-gradient(circle at center, rgba(246,193,199,0.15) 0%, transparent 70%)',
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[rgba(255,255,255,0.01)] to-transparent opacity-50 z-0" />
             
-            {/* Elegant border */}
-            <div 
-              className="absolute inset-0 rounded-xl sm:rounded-2xl z-0"
-              style={{
-                padding: '1px',
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.1) 100%)',
-                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                WebkitMaskComposite: 'xor',
-                maskComposite: 'exclude',
-              }}
-            />
-            <div className="absolute inset-[1px] rounded-xl sm:rounded-2xl border border-[rgba(255,255,255,0.08)] group-hover:border-[rgba(255,255,255,0.15)] transition-colors z-0" />
+            <div className="absolute inset-[1px] rounded-xl sm:rounded-2xl border border-[#D4AF37]/40 group-hover:border-[#D4AF37]/60 transition-colors z-0" />
             {/* Card content */}
             <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-10">
               {isLoading ? (
                 <div className="flex items-center justify-center py-12 sm:py-16 md:py-24">
                   <div className="flex flex-col items-center gap-3 sm:gap-4">
-                    <Loader2 className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 animate-spin text-zinc-300" />
-                    <span className="text-zinc-400 font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg">
+                    <Loader2 className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 animate-spin text-[#C68484]" />
+                    <span className="text-[#C68484]/90 font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg">
                       Loading entourage...
                     </span>
                   </div>
@@ -267,12 +255,12 @@ export function Entourage() {
               ) : error ? (
                 <div className="flex items-center justify-center py-12 sm:py-16 md:py-24">
                   <div className="text-center">
-                    <p className="text-red-400 font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg mb-3 sm:mb-4">
+                    <p className="text-red-600 font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg mb-3 sm:mb-4">
                       {error}
                     </p>
                     <button
                       onClick={fetchEntourage}
-                      className="text-zinc-300 hover:text-zinc-200 font-[family-name:var(--font-crimson)] underline transition-colors duration-300 text-sm sm:text-base"
+                      className="text-[#C68484] hover:text-[#7A3E3E] font-[family-name:var(--font-crimson)] underline transition-colors duration-300 text-sm sm:text-base"
                     >
                       Try again
                     </button>
@@ -280,8 +268,8 @@ export function Entourage() {
                 </div>
               ) : entourage.length === 0 ? (
                 <div className="text-center py-12 sm:py-16 md:py-24">
-                  <Users className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-zinc-600 mx-auto mb-3 sm:mb-4" />
-                  <p className="text-zinc-400 font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg">
+                  <Users className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 text-[#C68484]/60 mx-auto mb-3 sm:mb-4" />
+                  <p className="text-[#C68484]/90 font-[family-name:var(--font-crimson)] text-sm sm:text-base md:text-lg">
                     No entourage members yet
                   </p>
                 </div>
@@ -305,9 +293,9 @@ export function Entourage() {
                         <div key={category}>
                           {categoryIndex > 0 && (
                             <div className="flex items-center justify-center gap-3 sm:gap-4 py-4 sm:py-5 mb-6 sm:mb-7 md:mb-9">
-                              <div className="h-px w-12 sm:w-16 md:w-20 bg-zinc-500/40" />
-                              <div className="w-1.5 h-1.5 bg-zinc-500/50 rounded-full" />
-                              <div className="h-px w-12 sm:w-16 md:w-20 bg-zinc-500/40" />
+                              <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
+                              <div className="w-1.5 h-1.5 bg-[#D4AF37]/50 rounded-full" />
+                              <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
                             </div>
                           )}
                           <TwoColumnLayout
@@ -363,9 +351,9 @@ export function Entourage() {
                           <div key="Parents">
                             {categoryIndex > 0 && (
                               <div className="flex items-center justify-center gap-3 sm:gap-4 py-4 sm:py-5 mb-6 sm:mb-7 md:mb-9">
-                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
-                                <div className="w-1.5 h-1.5 bg-[#1A1A1A]/50 rounded-full" />
-                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
+                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
+                                <div className="w-1.5 h-1.5 bg-[#D4AF37]/50 rounded-full" />
+                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
                               </div>
                             )}
                             <TwoColumnLayout
@@ -439,9 +427,9 @@ export function Entourage() {
                           <div key="HonorAttendants">
                             {categoryIndex > 0 && (
                               <div className="flex items-center justify-center gap-3 sm:gap-4 py-4 sm:py-5 mb-6 sm:mb-7 md:mb-9">
-                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
-                                <div className="w-1.5 h-1.5 bg-[#1A1A1A]/50 rounded-full" />
-                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
+                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
+                                <div className="w-1.5 h-1.5 bg-[#D4AF37]/50 rounded-full" />
+                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
                               </div>
                             )}
                             <TwoColumnLayout
@@ -513,9 +501,9 @@ export function Entourage() {
                           <div key="BridalParty">
                             {categoryIndex > 0 && (
                               <div className="flex items-center justify-center gap-3 sm:gap-4 py-4 sm:py-5 mb-6 sm:mb-7 md:mb-9">
-                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
-                                <div className="w-1.5 h-1.5 bg-[#1A1A1A]/50 rounded-full" />
-                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
+                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
+                                <div className="w-1.5 h-1.5 bg-[#D4AF37]/50 rounded-full" />
+                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
                               </div>
                             )}
                             <TwoColumnLayout
@@ -587,9 +575,9 @@ export function Entourage() {
                           <div key="Sponsors">
                             {categoryIndex > 0 && (
                               <div className="flex items-center justify-center gap-3 sm:gap-4 py-4 sm:py-5 mb-6 sm:mb-7 md:mb-9">
-                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
-                                <div className="w-1.5 h-1.5 bg-[#1A1A1A]/50 rounded-full" />
-                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
+                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
+                                <div className="w-1.5 h-1.5 bg-[#D4AF37]/50 rounded-full" />
+                                <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
                               </div>
                             )}
                             <TwoColumnLayout
@@ -651,9 +639,9 @@ export function Entourage() {
                       <div key={category}>
                         {categoryIndex > 0 && (
                           <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 py-2 sm:py-3 md:py-4 mb-3 sm:mb-5 md:mb-7">
-                            <div className="h-px w-8 sm:w-12 md:w-16 bg-[#1A1A1A]/40" />
-                            <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#1A1A1A]/50 rounded-full" />
-                            <div className="h-px w-8 sm:w-12 md:w-16 bg-[#1A1A1A]/40" />
+                            <div className="h-px w-8 sm:w-12 md:w-16 bg-[#D4AF37]/40" />
+                            <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-[#D4AF37]/50 rounded-full" />
+                            <div className="h-px w-8 sm:w-12 md:w-16 bg-[#D4AF37]/40" />
                           </div>
                         )}
                         <TwoColumnLayout
@@ -754,9 +742,9 @@ export function Entourage() {
                       return (
                         <div key={category}>
                           <div className="flex items-center justify-center gap-3 sm:gap-4 py-4 sm:py-5 mb-6 sm:mb-7 md:mb-9">
-                            <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
-                            <div className="w-1.5 h-1.5 bg-[#1A1A1A]/50 rounded-full" />
-                            <div className="h-px w-12 sm:w-16 md:w-20 bg-[#1A1A1A]/40" />
+                            <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
+                            <div className="w-1.5 h-1.5 bg-[#D4AF37]/50 rounded-full" />
+                            <div className="h-px w-12 sm:w-16 md:w-20 bg-[#D4AF37]/40" />
                           </div>
                           <TwoColumnLayout
                             singleTitle={category}

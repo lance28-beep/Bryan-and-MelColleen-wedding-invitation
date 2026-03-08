@@ -1,23 +1,23 @@
 export const siteConfig = {
   couple: {
-    bride: "Mara L. Garay",
-    brideNickname: "Mara",
-    groom: "Kent Clark L. Alimes",
-    groomNickname: "Kent",
+    bride: "Mel Colleen Nombre Bat-og",
+    brideNickname: "Mel Colleen",
+    groom: "Bryan Lozada Garcia",
+    groomNickname: "Bryan",
   },
   wedding: {
-    date: "February 26, 2026",
-    time: "9:00 AM",
-    venue: "Municipal Trial Court - Prosperidad, Agusan del Sur",
+    date: "April 19, 2026",
+    time: "4:30 PM",
+    venue: "Nature's Village Resort - East Garden",
     tagline: "are getting married!",
     theme: "Navy Blue, Royal Blue, Gold, Sky Blue, White",
     motif: "Navy Blue, Royal Blue, Gold, Sky Blue, White",
   },
   details: {
     rsvp: {
-      deadline: "February 10, 2026",
+      deadline: "April 5, 2026",
       contacts: "+639XXXXXXXXX | +639XXXXXXXXX",
-      names: "Kent & Mara"
+      names: "Bryan & Mel Colleen"
     },
     policies: {
       attendance: "As we celebrate this moment with our closest loved ones, we kindly ask that attendance be limited to those named on the invitation",
@@ -27,21 +27,21 @@ export const siteConfig = {
     }
   },
   ceremony: {
-    location: "Municipal Trial Court",
-    venue: "Municipal Trial Court - Prosperidad, Agusan del Sur",
-    address: "Prosperidad, Agusan del Sur",
-    date: "February 26, 2026",
-    day: "Thursday",
-    time: "9:00 AM",
-    entourageTime: "8:30 AM",
-    guestsTime: "9:00 AM",
+    location: "Nature's Village Resort - East Garden",
+    venue: "Nature's Village Resort - East Garden",
+    address: "Nature's Village Resort, Talisay City, Negros Occidental",
+    date: "April 19, 2026",
+    day: "Sunday",
+    time: "4:30 PM",
+    entourageTime: "4:00 PM",
+    guestsTime: "4:30 PM",
   },
   reception: {
-    location: "RCBI Hotel",
-    venue: "RCBI Hotel",
-    address: "National Highway, San Isidro, San Francisco, Agusan del Sur",
-    date: "February 26, 2026",
-    time: "12:00 NN",
+    location: "Nature's Village Resort - Padre Pio B Function Hall",
+    venue: "Nature's Village Resort - Padre Pio B Function Hall",
+    address: "Nature's Village Resort, Talisay City, Negros Occidental",
+    date: "April 19, 2026",
+    time: "6:00 PM",
   },
   dressCode: {
     theme: "Navy Blue, Royal Blue, Gold, Sky Blue, White",
@@ -57,7 +57,7 @@ export const siteConfig = {
     },
     note: "Please strictly follow the dress code."
   },
-  narrative: `Two hearts, one love story. Kent and Mara are ready to begin their forever together. \n
+  narrative: `Two hearts, one love story. Bryan and Mel Colleen are ready to begin their forever together. \n
     \n
     Join us as we celebrate their love and commitment to each other on this special day. \n
     \n

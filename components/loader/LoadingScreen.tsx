@@ -5,9 +5,9 @@ interface LoadingScreenProps {
   onComplete: () => void
 }
 
-// Wedding date: February 26, 2026 → 02 26 26
-const GHOST_NUMBERS = ["02", "26", "26"]
-const COUPLE_NAMES = { groom: "Kent", bride: "Mara" }
+// Wedding date: April 19, 2026 → 04 19 26
+const GHOST_NUMBERS = ["04", "19", "26"]
+const COUPLE_NAMES = { groom: "Bryan", bride: "Mel Colleen" }
 
 export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [fadeOut, setFadeOut] = useState(false)
@@ -60,10 +60,15 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
       aria-valuemax={100}
       aria-label="Loading invitation"
     >
-      {/* Deep blue gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1C7A] to-[#0F299F]" />
+      {/* Champagne Glow → Soft Beige gradient background */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(180deg, #F7E7CE 0%, #EADBC8 100%)",
+        }}
+      />
 
-      {/* Ghosted background numbers — right side, stacked */}
+      {/* Ghosted background numbers — decorative, Peach Whisper */}
       <div
         className="absolute inset-0 pointer-events-none flex flex-col items-end justify-center pr-6 sm:pr-10 md:pr-14 lg:pr-20 gap-0 select-none"
         aria-hidden
@@ -74,7 +79,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             className="text-[7rem] sm:text-[9rem] md:text-[11rem] lg:text-[13rem] font-bold leading-[0.85] transition-opacity duration-1000 ease-out"
             style={{
               fontFamily: "var(--font-crimson)",
-              color: "rgba(255,255,255,0.04)",
+              color: "rgba(248, 208, 184, 0.4)",
               letterSpacing: "-0.03em",
               opacity: nameVisible ? 1 : 0,
               transitionDelay: `${i * 80}ms`,
@@ -94,10 +99,11 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           }`}
         >
           <div
-            className="h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 bg-gradient-to-br from-[#FFD700] to-[#EFBF04]"
+            className="h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36"
             style={{
-              maskImage: 'url("/monogram/newMonogram.png")',
-              WebkitMaskImage: 'url("/monogram/newMonogram.png")',
+              background: "linear-gradient(135deg, #C68484 0%, #F6C1C7 100%)",
+              maskImage: 'url("/monogram/monogram.png")',
+              WebkitMaskImage: 'url("/monogram/monogram.png")',
               maskSize: "contain",
               WebkitMaskSize: "contain",
               maskRepeat: "no-repeat",
@@ -116,20 +122,20 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase font-[family-name:var(--font-crimson)]">
+          <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.2em] text-[#C68484] uppercase font-[family-name:var(--font-crimson)]">
             {COUPLE_NAMES.groom}
           </span>
-          <span className="text-2xl sm:text-3xl md:text-4xl mx-2 font-[family-name:var(--font-ephesis)] font-normal text-zinc-200">
+          <span className="text-2xl sm:text-3xl md:text-4xl mx-2 font-[family-name:var(--font-ephesis)] font-normal text-[#F6C1C7]">
             &amp;
           </span>
-          <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase font-[family-name:var(--font-crimson)]">
+          <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.2em] text-[#C68484] uppercase font-[family-name:var(--font-crimson)]">
             {COUPLE_NAMES.bride}
           </span>
         </h1>
 
         {/* Supporting line */}
         <p
-          className={`text-[10px] sm:text-xs tracking-[0.3em] text-zinc-500 uppercase mb-12 sm:mb-14 font-[family-name:var(--font-crimson)] transition-all duration-600 ease-out ${
+          className={`text-[10px] sm:text-xs tracking-[0.3em] text-[#C68484] uppercase mb-12 sm:mb-14 font-[family-name:var(--font-crimson)] transition-all duration-600 ease-out ${
             supportVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4"
@@ -146,24 +152,28 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               : "opacity-0 translate-y-4"
           }`}
         >
-          <p className="text-xs sm:text-sm tracking-[0.22em] text-zinc-400 uppercase mb-5 sm:mb-6 font-[family-name:var(--font-crimson)]">
+          <p className="text-xs sm:text-sm tracking-[0.22em] text-[#C68484] uppercase mb-5 sm:mb-6 font-[family-name:var(--font-crimson)]">
             Preparing your invitation
           </p>
 
-          {/* Progress bar — clearer track and fill */}
+          {/* Progress bar — track: Soft Beige, fill: Dusty Rose, subtle gold accent */}
           <div className="w-full max-w-[220px] mx-auto mb-3">
             <div
-              className="h-0.5 sm:h-1 bg-zinc-800 rounded-full overflow-hidden"
+              className="h-0.5 sm:h-1 rounded-full overflow-hidden border border-[#D4AF37]/30"
+              style={{ backgroundColor: "rgba(234, 219, 200, 0.8)" }}
               role="presentation"
             >
               <div
-                className="h-full bg-zinc-100 rounded-full transition-all duration-300 ease-out min-w-[2px]"
-                style={{ width: `${Math.max(progress, 2)}%` }}
+                className="h-full rounded-full transition-all duration-300 ease-out min-w-[2px]"
+                style={{
+                  width: `${Math.max(progress, 2)}%`,
+                  backgroundColor: "#C68484",
+                }}
               />
             </div>
           </div>
           <p
-            className="text-[10px] sm:text-xs tracking-[0.25em] text-zinc-500 font-[family-name:var(--font-crimson)] tabular-nums"
+            className="text-[10px] sm:text-xs tracking-[0.25em] text-[#C68484] font-[family-name:var(--font-crimson)] tabular-nums"
             aria-live="polite"
           >
             {progress}%

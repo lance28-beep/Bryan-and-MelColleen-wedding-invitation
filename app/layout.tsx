@@ -25,25 +25,25 @@ const chicanos = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Kent & Mara - Wedding Invitation",
+  title: "Bryan & Mel Colleen - Wedding Invitation",
   description:
-    "You're invited to the wedding of Kent & Mara! Join us on February 26, 2026 at Municipal Trial Court, Prosperidad, Agusan del Sur. RSVP, read our love story, view our gallery, and leave a message for the couple.",
+    "You're invited to the wedding of Bryan & Mel Colleen! Join us on April 19, 2026 at Nature's Village Resort - East Garden, Talisay City, Negros Occidental. RSVP, read our love story, view our gallery, and leave a message for the couple.",
   keywords:
-    "Kent & Mara wedding, Filipino wedding, RSVP, wedding gallery, wedding message wall, wedding invitation, 2026 weddings, love story, guestbook, wedding registry, wedding details, wedding venues Municipal Trial Court, Prosperidad, Agusan del Sur, #KentAndMaraForever",
+    "Bryan & Mel Colleen wedding, Filipino wedding, RSVP, wedding gallery, wedding message wall, wedding invitation, 2026 weddings, love story, guestbook, wedding registry, wedding details, Nature's Village Resort, Talisay City, Negros Occidental, #BryanAndMelColleen",
   authors: [
-    { name: "Kent" },
-    { name: "Mara" },
+    { name: "Bryan" },
+    { name: "Mel Colleen" },
   ],
-  creator: "Kent & Mara",
-  publisher: "Kent & Mara",
+  creator: "Bryan & Mel Colleen",
+  publisher: "Bryan & Mel Colleen",
   formatDetection: {
     email: false,
     address: false,
     telephone: true,
   },
-  metadataBase: new URL("https://kent-and-mara-invitation.vercel.app/"),
+  metadataBase: new URL("https://bryan-melcolleen-wedding.vercel.app/"),
   alternates: {
-    canonical: "https://kent-and-mara-invitation.vercel.app/",
+    canonical: "https://bryan-melcolleen-wedding.vercel.app/",
   },
   icons: {
     icon: [
@@ -65,29 +65,29 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon_io/site.webmanifest",
   openGraph: {
-    title: "Kent & Mara Wedding | February 26, 2026",
+    title: "Bryan & Mel Colleen Wedding | April 19, 2026",
     description:
-      "Celebrate the union of Kent & Mara on February 26, 2026 at Municipal Trial Court, Prosperidad, Agusan del Sur. Discover our love story, RSVP, view the gallery, and leave your wishes!",
-    url: "https://kent-and-mara-invitation.vercel.app/",
-    siteName: "Kent and Mara Wedding",
+      "Celebrate the union of Bryan & Mel Colleen on April 19, 2026 at Nature's Village Resort, Talisay City, Negros Occidental. Discover our love story, RSVP, view the gallery, and leave your wishes!",
+    url: "https://bryan-melcolleen-wedding.vercel.app/",
+    siteName: "Bryan and Mel Colleen Wedding",
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://kent-and-mara-invitation.vercel.app/Details/LinkPreview.jpg",
+        url: "https://bryan-melcolleen-wedding.vercel.app/Details/LinkPreviewnew.jpg",
         width: 1200,
         height: 630,
-        alt: "Kent & Mara Wedding Invitation - February 26, 2026",
+        alt: "Bryan & Mel Colleen Wedding Invitation - April 19, 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-        title: "Kent & Mara Wedding Invitation",
+        title: "Bryan & Mel Colleen Wedding Invitation",
     description:
-      "You're invited to the wedding of Kent & Mara! February 26, 2026. RSVP, view our gallery, and leave a message! #KentAndMaraForever",
-    images: ["https://kent-and-mara-invitation.vercel.app/Details/LinkPreview.jpg"],
-    creator: "@kentandmara",
+      "You're invited to the wedding of Bryan & Mel Colleen! April 19, 2026. RSVP, view our gallery, and leave a message! #BryanAndMelColleen",
+    images: ["https://bryan-melcolleen-wedding.vercel.app/Details/LinkPreviewnew.jpg"],
+    creator: "@bryanmelcolleen",
   },
   robots: {
     index: true,
@@ -107,52 +107,52 @@ export const metadata: Metadata = {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Event",
-        name: "Kent & Mara Wedding",
-      startDate: "2026-02-26T09:00:00+08:00",
-      endDate: "2026-02-26T12:00:00+08:00",
+        name: "Bryan & Mel Colleen Wedding",
+      startDate: "2026-04-19T16:30:00+08:00",
+      endDate: "2026-04-19T22:00:00+08:00",
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: [
         {
           "@type": "Place",
-          name: "Municipal Trial Court, Prosperidad, Agusan del Sur",
+          name: "Nature's Village Resort - East Garden, Talisay City, Negros Occidental",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Prosperidad, Agusan del Sur",
-            addressLocality: "Prosperidad",
-            addressRegion: "Agusan del Sur",
-            postalCode: "8421",
+            streetAddress: "Nature's Village Resort, Talisay City",
+            addressLocality: "Talisay City",
+            addressRegion: "Negros Occidental",
+            postalCode: "6115",
             addressCountry: "PH",
           },
         },
         {
           "@type": "Place",
-          name: "RCBI Hotel, National Highway, San Isidro, San Francisco, Agusan del Sur",
+          name: "Nature's Village Resort - Padre Pio B Function Hall, Talisay City, Negros Occidental",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "National Highway, San Isidro, San Francisco, Agusan del Sur",
-            addressLocality: "San Francisco",
-            addressRegion: "Agusan del Sur",
-            postalCode: "8421",
+            streetAddress: "Nature's Village Resort, Talisay City",
+            addressLocality: "Talisay City",
+            addressRegion: "Negros Occidental",
+            postalCode: "6115",
             addressCountry: "PH",
           },
         },
       ],
-      image: ["https://kent-and-mara-invitation.vercel.app/Details/LinkPreview.jpg"],
+      image: ["https://bryan-melcolleen-wedding.vercel.app/Details/LinkPreviewnew.jpg"],
       description:
-        "You're invited to the wedding of Kent & Mara! Join us on February 26, 2026 at Municipal Trial Court, Prosperidad, Agusan del Sur. RSVP, read our love story, view our gallery, and leave a message for the couple.",
+        "You're invited to the wedding of Bryan & Mel Colleen! Join us on April 19, 2026 at Nature's Village Resort, Talisay City, Negros Occidental. RSVP, read our love story, view our gallery, and leave a message for the couple.",
       organizer: {
         "@type": "Person",
-        name: "Kent & Mara",
+        name: "Bryan & Mel Colleen",
       },
       offers: {
         "@type": "Offer",
-        url: "https://kent-and-mara-invitation.vercel.app/",
+        url: "https://bryan-melcolleen-wedding.vercel.app/",
         availability: "https://schema.org/InStock",
         price: "0",
         priceCurrency: "PHP",
       },
-          eventHashtag: "#KentAndMaraForever",
+          eventHashtag: "#BryanAndMelColleen",
     }),
   },
 }

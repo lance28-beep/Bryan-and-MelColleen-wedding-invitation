@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import StaggeredMenu from "./StaggeredMenu";
 
 const navLinks = [
@@ -87,21 +86,29 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
         isScrolled
-          ? "bg-[#0F299F]/90 backdrop-blur-xl shadow-lg border-b border-white/10"
-          : "bg-[#0F299F]/70 backdrop-blur-lg border-b border-white/5"
+          ? "bg-[#F7E7CE]/95 backdrop-blur-xl shadow-lg border-b border-[#D4AF37]/30"
+          : "bg-[#F7E7CE]/80 backdrop-blur-lg border-b border-[#D4AF37]/20"
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center h-14 sm:h-14 md:h-14">
           <Link href="#home" className="flex-shrink-0 group relative z-10 flex items-center">
-            <Image
-              src="/monogram/newMonogram.png"
-              alt="Kent & Mara"
-              width={48}
-              height={48}
-              className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 object-contain object-center brightness-0 invert group-hover:opacity-90 transition-opacity duration-300"
-              priority
+            <div
+              className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 group-hover:opacity-90 transition-opacity duration-300"
+              style={{
+                background: "linear-gradient(135deg, #C68484 0%, #F6C1C7 100%)",
+                maskImage: 'url("/monogram/monogram.png")',
+                WebkitMaskImage: 'url("/monogram/monogram.png")',
+                maskSize: "contain",
+                WebkitMaskSize: "contain",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
+                maskPosition: "center",
+                WebkitMaskPosition: "center",
+              }}
+              aria-hidden
             />
+            <span className="sr-only">Bryan & Mel Colleen</span>
           </Link>
 
           <div className="hidden md:flex gap-1 items-center">
@@ -113,13 +120,13 @@ export function Navbar() {
                   href={link.href}
                   className={`px-3 lg:px-4 py-1.5 text-xs lg:text-sm font-[family-name:var(--font-crimson)] font-normal tracking-wide transition-all duration-300 relative group ${
                     isActive
-                      ? "text-zinc-100"
-                      : "text-zinc-400 hover:text-zinc-200"
+                      ? "text-[#C68484]"
+                      : "text-[#C68484]/70 hover:text-[#C68484]"
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-0 h-[1.5px] bg-zinc-400 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-[1.5px] bg-[#C68484] transition-all duration-300 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -134,11 +141,11 @@ export function Navbar() {
               items={menuItems}
               socialItems={[]}
               displaySocials={false}
-              menuButtonColor="#e4e4e7"
-              openMenuButtonColor="#fafafa"
+              menuButtonColor="#C68484"
+              openMenuButtonColor="#7A3E3E"
               changeMenuColorOnOpen={true}
-              colors={["#000000", "#0a0a0a", "#171717", "#050505"]}
-              accentColor="#fafafa"
+              colors={["#F7E7CE", "#EADBC8", "#F6C1C7", "#F8D0B8"]}
+              accentColor="#C68484"
               isFixed={true}
               onMenuOpen={() => {}}
               onMenuClose={() => {}}

@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 const BACKGROUND_VIDEO_SRC =
-  "/background_music/blue sparkle celebration glitter particles lights background video effects - Royalty Free Animations (1080p, h264).mp4"
+  "/background_music/Simple wedding peach blossom  Background Video - Video Effects (1080p, h264).mp4"
 
 export function Hero({ onOpen, visible }: HeroProps) {
   const [contentVisible, setContentVisible] = useState(false)
@@ -39,19 +39,19 @@ export function Hero({ onOpen, visible }: HeroProps) {
         >
           <source src={encodeURI(BACKGROUND_VIDEO_SRC)} type="video/mp4" />
         </video>
-        {/* Gradient overlays for text readability */}
+        {/* Gradient overlays — warm champagne/dusty rose tint for readability */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(24,24,27,0.35), rgba(24,24,27,0.7))",
+              "linear-gradient(to bottom, rgba(247,231,206,0.25), rgba(198,132,132,0.55))",
           }}
         />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse at center, transparent 0%, rgba(24,24,27,0.35) 100%)",
+              "radial-gradient(ellipse at center, transparent 0%, rgba(234,219,200,0.3) 100%)",
           }}
         />
       </div>
@@ -66,10 +66,11 @@ export function Hero({ onOpen, visible }: HeroProps) {
         >
           <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex items-center justify-center">
             <div
-              className="h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 bg-gradient-to-br from-[#FFD700] to-[#EFBF04] drop-shadow-lg"
+              className="h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 drop-shadow-lg"
               style={{
-                maskImage: 'url("/monogram/newMonogram.png")',
-                WebkitMaskImage: 'url("/monogram/newMonogram.png")',
+                background: "linear-gradient(135deg, #C68484 0%, #F6C1C7 100%)",
+                maskImage: 'url("/monogram/monogram.png")',
+                WebkitMaskImage: 'url("/monogram/monogram.png")',
                 maskSize: "contain",
                 WebkitMaskSize: "contain",
                 maskRepeat: "no-repeat",
@@ -91,21 +92,21 @@ export function Hero({ onOpen, visible }: HeroProps) {
             style={{
               fontFamily: '"Great Vibes", cursive',
               fontWeight: 400,
-              color: "#ffffff",
-              textShadow: "0 2px 8px rgba(0, 0, 0, 0.4)",
+              color: "#F7E7CE",
+              textShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
             }}
           >
             You are
           </h2>
 
           <h1
-            className={`text-5xl md:text-7xl font-bold tracking-wider uppercase transition-all duration-1000 ease-out delay-300 bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] ${
+            className={`text-5xl md:text-7xl font-bold tracking-wider uppercase transition-all duration-1000 ease-out delay-300 text-[#C68484] ${
               contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{
               fontFamily: '"Cinzel", serif',
               fontWeight: 700,
-              textShadow: "0 2px 8px rgba(0, 0, 0, 0.4)",
+              textShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
               letterSpacing: "0.05em",
             }}
           >
@@ -115,7 +116,7 @@ export function Hero({ onOpen, visible }: HeroProps) {
           <button
             type="button"
             onClick={onOpen}
-            className={`px-10 py-4 text-sm font-[family-name:var(--font-crimson)] tracking-[0.2em] uppercase rounded-sm border border-zinc-500 bg-[#0D1C7A] text-zinc-100 transition-all duration-500 delay-500 hover:bg-[#0F299F] hover:border-zinc-400 active:scale-[0.98] ${
+            className={`px-10 py-4 text-sm font-[family-name:var(--font-crimson)] tracking-[0.2em] uppercase rounded-sm border border-[#D4AF37]/50 bg-[#C68484] text-[#F7E7CE] transition-all duration-500 delay-500 hover:bg-[#F6C1C7] hover:border-[#F8D0B8]/70 active:scale-[0.98] ${
               contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
