@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://bryan-and-colleen.weddinginvitationrsvp.com/public/LinkPreviewnews.jpg",
+        url: "https://bryan-and-colleen.weddinginvitationrsvp.com/Details/LinkPreviewnews.jpg",
         width: 1200,
         height: 630,
         alt: "Bryan & Mel Colleen Wedding Invitation - April 19, 2026",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
         title: "Bryan & Mel Colleen Wedding Invitation",
     description:
       "You're invited to the wedding of Bryan & Mel Colleen! April 19, 2026. RSVP, view our gallery, and leave a message! #BryanAndMelColleen",
-    images: ["https://bryan-and-colleen.weddinginvitationrsvp.com/public/LinkPreviewnews.jpg"],
+    images: ["https://bryan-and-colleen.weddinginvitationrsvp.com/Details/LinkPreviewnews.jpg"],
     creator: "@bryanmelcolleen",
   },
   robots: {
@@ -138,7 +138,7 @@ export const metadata: Metadata = {
           },
         },
       ],
-      image: ["https://bryan-and-colleen.weddinginvitationrsvp.com/public/LinkPreviewnews.jpg"],
+      image: ["https://bryan-and-colleen.weddinginvitationrsvp.com/Details/LinkPreviewnews.jpg"],
       description:
         "You're invited to the wedding of Bryan & Mel Colleen! Join us on April 19, 2026 at Nature's Village Resort, Talisay City, Negros Occidental. RSVP, read our love story, view our gallery, and leave a message for the couple.",
       organizer: {
