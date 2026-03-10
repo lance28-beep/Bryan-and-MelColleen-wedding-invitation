@@ -429,16 +429,20 @@ export function Details() {
                       <br />
                       Female: <span className="font-semibold text-[#A45C5C]">Beige/khaki long gown or formal attire</span>
                     </p>
-                    <div className="flex items-center justify-center gap-2">
-                      {["#E6CAB4", "#E5D4BA", "#EFEBE0"].map((hex) => (
+                    <div className="flex items-center justify-center gap-3 sm:gap-4">
+                      {[
+                        { hex: "#E6CAB4", name: "Soft Nude" },
+                        { hex: "#E5D4BA", name: "Warm Beige" },
+                        { hex: "#EFEBE0", name: "Light Cream" },
+                      ].map(({ hex, name }) => (
                         <div key={hex} className="flex flex-col items-center gap-1">
                           <span
-                            className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-white/60 shadow-sm"
+                            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/80 shadow-md"
                             style={{ backgroundColor: hex }}
                             aria-hidden
                           />
                           <span className="text-[9px] sm:text-[10px] font-[family-name:var(--font-crimson)] text-[#7A3E3E]/80">
-                            {hex}
+                            {name}
                           </span>
                         </div>
                       ))}
@@ -447,7 +451,12 @@ export function Details() {
 
                   <div className="h-px w-16 sm:w-24 mx-auto bg-[#D4AF37]/30" />
 
-                  {/* Bridesmaids & Groomsmen */}
+                  {/* Secondary Sponsors & Entourage */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] tracking-[0.26em] uppercase text-[#7A3E3E]" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.1)" }}>
+                      Secondary Sponsors &amp; Entourage
+                    </h4>
+                                      {/* Bridesmaids & Groomsmen */}
                   <div className="space-y-3">
                     <h4 className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] tracking-[0.26em] uppercase text-[#7A3E3E]" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.1)" }}>
                       Bridesmaids &amp; Groomsmen
@@ -457,21 +466,30 @@ export function Details() {
                       <br />
                       Groomsmen: <span className="font-semibold text-[#A45C5C]">Classic cream Barong with cream pants</span>
                     </p>
-                    <div className="flex items-center justify-center gap-2">
-                      {["#FEF7DB"].map((hex) => (
+                  </div>
+                    <div className="flex items-center justify-center gap-3 sm:gap-4">
+                      {[
+                        { hex: "#FBDFD4", name: "Soft Pink" },
+                        { hex: "#EFEBE0", name: "Light Cream" },
+                        { hex: "#FEF7DB", name: "Champagne" },
+                      ].map(({ hex, name }) => (
                         <div key={hex} className="flex flex-col items-center gap-1">
                           <span
-                            className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-white/60 shadow-sm"
+                            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/80 shadow-md"
                             style={{ backgroundColor: hex }}
                             aria-hidden
                           />
                           <span className="text-[9px] sm:text-[10px] font-[family-name:var(--font-crimson)] text-[#7A3E3E]/80">
-                            {hex}
+                            {name}
                           </span>
                         </div>
                       ))}
                     </div>
                   </div>
+
+                  <div className="h-px w-16 sm:w-24 mx-auto bg-[#D4AF37]/30" />
+
+
 
                   <div className="h-px w-16 sm:w-24 mx-auto bg-[#D4AF37]/30" />
 
@@ -487,16 +505,22 @@ export function Details() {
                       </span>
                       .
                     </p>
-                    <div className="flex flex-wrap items-center justify-center gap-2">
-                      {["#FBDFD4", "#FACEB3", "#FEF7DB", "#EFEBE0", "#E5D4BA"].map((hex) => (
+                    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                      {[
+                        { hex: "#FBDFD4", name: "Soft Pink" },
+                        { hex: "#FACEB3", name: "Peach" },
+                        { hex: "#FEF7DB", name: "Champagne" },
+                        { hex: "#EFEBE0", name: "Light Gray" },
+                        { hex: "#E5D4BA", name: "Beige" },
+                      ].map(({ hex, name }) => (
                         <div key={hex} className="flex flex-col items-center gap-1">
                           <span
-                            className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-white/60 shadow-sm"
+                            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/80 shadow-md"
                             style={{ backgroundColor: hex }}
                             aria-hidden
                           />
                           <span className="text-[9px] sm:text-[10px] font-[family-name:var(--font-crimson)] text-[#7A3E3E]/80">
-                            {hex}
+                            {name}
                           </span>
                         </div>
                       ))}
