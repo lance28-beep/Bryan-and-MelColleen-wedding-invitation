@@ -7,7 +7,7 @@ interface LoadingScreenProps {
 
 // Wedding date: April 19, 2026 → 04 19 26
 const GHOST_NUMBERS = ["04", "19", "26"]
-const COUPLE_NAMES = { groom: "Bryan", bride: "Mel Colleen" }
+const COUPLE_NAMES = { groom: "Bryan", bride: "Colleen" }
 
 export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [fadeOut, setFadeOut] = useState(false)
@@ -101,15 +101,17 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           <div
             className="h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36"
             style={{
-              background: "linear-gradient(135deg, #C68484 0%, #F6C1C7 100%)",
-              maskImage: 'url("/monogram/monogram.png")',
-              WebkitMaskImage: 'url("/monogram/monogram.png")',
+              backgroundColor: "#7B3F3F",
+              maskImage: 'url("/monogram/newMonogramv2.png")',
+              WebkitMaskImage: 'url("/monogram/newMonogramv2.png")',
               maskSize: "contain",
               WebkitMaskSize: "contain",
               maskRepeat: "no-repeat",
               WebkitMaskRepeat: "no-repeat",
               maskPosition: "center",
               WebkitMaskPosition: "center",
+              boxShadow:
+                "0 0 18px rgba(123, 63, 63, 0.7), 0 0 32px rgba(123, 63, 63, 0.5)",
             }}
           />
         </div>

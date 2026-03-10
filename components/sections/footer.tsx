@@ -34,20 +34,22 @@ export function Footer() {
           variants={fadeInUp}
         >
           <div className="max-w-xl md:max-w-2xl w-full text-center">
-            {/* Monogram – same as hero */}
+            {/* Monogram – deep rose to match site palette */}
             <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
               <div
                 className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72"
                 style={{
-                  maskImage: 'url("/monogram/monogram.png")',
-                  WebkitMaskImage: 'url("/monogram/monogram.png")',
+                  backgroundColor: "#7B3F3F",
+                  maskImage: 'url("/monogram/newMonogramv2.png")',
+                  WebkitMaskImage: 'url("/monogram/newMonogramv2.png")',
                   maskSize: "contain",
                   WebkitMaskSize: "contain",
                   maskRepeat: "no-repeat",
                   WebkitMaskRepeat: "no-repeat",
                   maskPosition: "center",
                   WebkitMaskPosition: "center",
-                  background: "linear-gradient(135deg, #D4AF37 0%, #C68484 50%, #D4AF37 100%)",
+                  boxShadow:
+                    "0 0 26px rgba(123, 63, 63, 0.7), 0 0 46px rgba(123, 63, 63, 0.5)",
                 }}
               />
             </div>

@@ -96,15 +96,17 @@ export function Navbar() {
             <div
               className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 group-hover:opacity-90 transition-opacity duration-300"
               style={{
-                background: "linear-gradient(135deg, #C68484 0%, #F6C1C7 100%)",
-                maskImage: 'url("/monogram/monogram.png")',
-                WebkitMaskImage: 'url("/monogram/monogram.png")',
+                backgroundColor: "#7B3F3F",
+                maskImage: 'url("/monogram/newMonogramv2.png")',
+                WebkitMaskImage: 'url("/monogram/newMonogramv2.png")',
                 maskSize: "contain",
                 WebkitMaskSize: "contain",
                 maskRepeat: "no-repeat",
                 WebkitMaskRepeat: "no-repeat",
                 maskPosition: "center",
                 WebkitMaskPosition: "center",
+                boxShadow:
+                  "0 0 10px rgba(123, 63, 63, 0.6), 0 0 20px rgba(123, 63, 63, 0.4)",
               }}
               aria-hidden
             />

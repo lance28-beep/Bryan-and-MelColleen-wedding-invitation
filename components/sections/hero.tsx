@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import StarBorder from "@/components/ui/StarBorder"
+import { siteConfig } from "@/content/site"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -29,20 +30,6 @@ export function Hero() {
             boxShadow: '0 0 0 1px rgba(212,175,55,0.2), 0 8px 32px rgba(0,0,0,0.15), 0 30px 90px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)',
           }}
         >
-          {/* Champagne/Peach gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#F7E7CE] via-[#EADBC8] to-[#F8D0B8]" />
-          
-          {/* Subtle radial gradient for depth */}
-          <div 
-            className="absolute inset-0 opacity-60"
-            style={{
-              background: 'radial-gradient(circle at center, rgba(246,193,199,0.15) 0%, transparent 70%)',
-            }}
-          />
-          
-          {/* Elegant shimmer overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[rgba(255,255,255,0.08)] to-transparent opacity-50" />
-          
           {/* Elegant border — Soft Gold subtle accent */}
           <div 
             className="absolute inset-0 rounded-[22px] sm:rounded-[26px] md:rounded-[30px]"
@@ -65,15 +52,17 @@ export function Hero() {
               <div
                 className="h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48"
                 style={{
-                  background: 'linear-gradient(135deg, #C68484 0%, #F6C1C7 100%)',
-                  maskImage: 'url("/monogram/monogram.png")',
-                  WebkitMaskImage: 'url("/monogram/monogram.png")',
+                  backgroundColor: "#7B3F3F",
+                  maskImage: 'url("/monogram/newMonogramv2.png")',
+                  WebkitMaskImage: 'url("/monogram/newMonogramv2.png")',
                   maskSize: "contain",
                   WebkitMaskSize: "contain",
                   maskRepeat: "no-repeat",
                   WebkitMaskRepeat: "no-repeat",
                   maskPosition: "center",
                   WebkitMaskPosition: "center",
+                  boxShadow:
+                    "0 0 22px rgba(123, 63, 63, 0.65), 0 0 40px rgba(123, 63, 63, 0.45)",
                 }}
               />
             </div>
@@ -88,7 +77,7 @@ export function Hero() {
               {/* Groom */}
               <div className="space-y-1">
                 <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-[#C68484] uppercase">
-                  Bryan
+                 {siteConfig.couple.groomNickname}
                 </p>
               </div>
 
@@ -100,7 +89,7 @@ export function Hero() {
               {/* Bride */}
               <div className="space-y-1">
                 <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-[#C68484] uppercase">
-                  Mel Colleen
+                  {siteConfig.couple.brideNickname}
                 </p>
               </div>
             </div>

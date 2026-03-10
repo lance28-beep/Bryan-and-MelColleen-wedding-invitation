@@ -8,7 +8,7 @@ import { QRCodeSVG } from "qrcode.react"
 import StarBorder from "@/components/ui/StarBorder"
 
 const CEREMONY_IMAGES = [
-  "/Details/East Garden.png",
+  "/Details/CampEdgar.png",
 ] as const
 const RECEPTION_IMAGES = [
   "/Details/Padre Pio Pavilion B.png",
@@ -53,11 +53,11 @@ export function Details() {
   }
 
   // Venue information (aligned with hero and FAQ)
-  const ceremonyVenueName = "Nature's Village Resort - East Garden"
+  const ceremonyVenueName = "Nature's Village Resort - Camp Edgar"
   const ceremonyVenueDetail = "Talisay City, Negros Occidental"
   const ceremonyVenue = `${ceremonyVenueName}, ${ceremonyVenueDetail}`
   const ceremonyMapsLink = `https://maps.google.com/?q=${encodeURIComponent(ceremonyVenue)}`
-  const ceremonyVenuePageLink = "https://naturesvillageresort.com/accommodations/east-garden/"
+  const ceremonyVenuePageLink = "https://naturesvillageresort.com/accommodations/camp-edgar/"
 
   const receptionVenueName = "Nature's Village Resort - Padre Pio B Function Hall"
   const receptionVenueDetail = "Talisay City, Negros Occidental"
@@ -152,7 +152,7 @@ export function Details() {
                 </p>
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-[family-name:var(--font-crimson)] font-semibold text-white mb-0.5 sm:mb-1 uppercase leading-tight" style={{ letterSpacing: "0.1em", textShadow: "0 2px 8px rgba(0,0,0,0.25)" }}>
                   Nature&apos;s Village Resort
-                  <span className="block text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-light text-[#F7E7CE] mt-0.5">East Garden</span>
+                  <span className="block text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-light text-[#F7E7CE] mt-0.5">Camp Edgar</span>
                 </h3>
                 <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-white/95 tracking-wide" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.25)" }}>
                   Talisay City, Negros Occidental
@@ -417,15 +417,91 @@ export function Details() {
               <div className="absolute inset-0 border border-[#D4AF37]/30 rounded-xl sm:rounded-2xl" />
               
               <div className="relative z-10 max-w-2xl mx-auto">
-                {/* Attire Guidelines — elegant paragraph format */}
-                <div className="space-y-6 sm:space-y-8 text-center">
-                  <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] leading-relaxed" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
-                    To honour our soft pastel motif, we kindly request that our bridesmaids dress in <em className="font-semibold text-[#A45C5C] not-italic">champagne</em>, while our maid of honour stands out in <em className="font-semibold text-[#A45C5C] not-italic">peach pink</em>. Our female principal sponsors will grace the occasion in elegant <em className="font-semibold text-[#A45C5C] not-italic">beige</em>.
-                  </p>
+                {/* Attire Guidelines — structured with color palettes */}
+                <div className="space-y-7 sm:space-y-8 text-center">
+                  {/* Principal Sponsors */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] tracking-[0.26em] uppercase text-[#7A3E3E]" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.1)" }}>
+                      Principal Sponsors
+                    </h4>
+                    <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] leading-relaxed" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
+                      Male: <span className="font-semibold text-[#A45C5C]">Classic cream Barong with black pants</span>
+                      <br />
+                      Female: <span className="font-semibold text-[#A45C5C]">Beige/khaki long gown or formal attire</span>
+                    </p>
+                    <div className="flex items-center justify-center gap-2">
+                      {["#E6CAB4", "#E5D4BA", "#EFEBE0"].map((hex) => (
+                        <div key={hex} className="flex flex-col items-center gap-1">
+                          <span
+                            className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-white/60 shadow-sm"
+                            style={{ backgroundColor: hex }}
+                            aria-hidden
+                          />
+                          <span className="text-[9px] sm:text-[10px] font-[family-name:var(--font-crimson)] text-[#7A3E3E]/80">
+                            {hex}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                   <div className="h-px w-16 sm:w-24 mx-auto bg-[#D4AF37]/30" />
-                  <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] leading-relaxed" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
-                    Our male principal sponsors are invited to wear the timeless <em className="font-semibold text-[#A45C5C] not-italic">Barong</em>. Gentlemen in our bridal party may opt for <em className="font-semibold text-[#A45C5C] not-italic">blush pink</em> or <em className="font-semibold text-[#A45C5C] not-italic">peach</em> to complement our palette.
-                  </p>
+
+                  {/* Bridesmaids & Groomsmen */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] tracking-[0.26em] uppercase text-[#7A3E3E]" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.1)" }}>
+                      Bridesmaids &amp; Groomsmen
+                    </h4>
+                    <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] leading-relaxed" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
+                      Bridesmaids: <span className="font-semibold text-[#A45C5C]">Champagne long gown</span>
+                      <br />
+                      Groomsmen: <span className="font-semibold text-[#A45C5C]">Classic cream Barong with cream pants</span>
+                    </p>
+                    <div className="flex items-center justify-center gap-2">
+                      {["#FEF7DB"].map((hex) => (
+                        <div key={hex} className="flex flex-col items-center gap-1">
+                          <span
+                            className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-white/60 shadow-sm"
+                            style={{ backgroundColor: hex }}
+                            aria-hidden
+                          />
+                          <span className="text-[9px] sm:text-[10px] font-[family-name:var(--font-crimson)] text-[#7A3E3E]/80">
+                            {hex}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="h-px w-16 sm:w-24 mx-auto bg-[#D4AF37]/30" />
+
+                  {/* Guests */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] tracking-[0.26em] uppercase text-[#7A3E3E]" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.1)" }}>
+                      Guests
+                    </h4>
+                    <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] leading-relaxed" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
+                      Semi-formal attire in soft tones of{" "}
+                      <span className="font-semibold text-[#A45C5C]">
+                        pink, peach, beige, champagne, and gray
+                      </span>
+                      .
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center gap-2">
+                      {["#FBDFD4", "#FACEB3", "#FEF7DB", "#EFEBE0", "#E5D4BA"].map((hex) => (
+                        <div key={hex} className="flex flex-col items-center gap-1">
+                          <span
+                            className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-white/60 shadow-sm"
+                            style={{ backgroundColor: hex }}
+                            aria-hidden
+                          />
+                          <span className="text-[9px] sm:text-[10px] font-[family-name:var(--font-crimson)] text-[#7A3E3E]/80">
+                            {hex}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

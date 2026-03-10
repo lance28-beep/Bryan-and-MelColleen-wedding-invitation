@@ -1,7 +1,7 @@
 export const siteConfig = {
   couple: {
     bride: "Mel Colleen Nombre Bat-og",
-    brideNickname: "Mel Colleen",
+    brideNickname: "Colleen",
     groom: "Bryan Lozada Garcia",
     groomNickname: "Bryan",
   },
@@ -17,7 +17,7 @@ export const siteConfig = {
     rsvp: {
       deadline: "April 5, 2026",
       contacts: "+639XXXXXXXXX | +639XXXXXXXXX",
-      names: "Bryan & Mel Colleen"
+      names: "Bryan & Colleen"
     },
     policies: {
       attendance: "As we celebrate this moment with our closest loved ones, we kindly ask that attendance be limited to those named on the invitation",

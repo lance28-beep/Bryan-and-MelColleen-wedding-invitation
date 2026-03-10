@@ -20,6 +20,7 @@ import { FAQ } from "@/components/sections/faq"
 import { SnapShare } from "@/components/sections/snap-share"
 import { Footer } from "@/components/sections/footer"
 import BackgroundMusic from "@/components/background-music"
+import { Gallery } from "@/components/sections/gallery"
 
 
 enum AppState {
@@ -66,6 +67,7 @@ export default function Home() {
               {appState === AppState.DETAILS && <Navbar />}
               <MainHero />
               <Countdown />
+              <Gallery />
               {/* <LoveStory /> */}
               <Details />
               <WeddingTimeline />
