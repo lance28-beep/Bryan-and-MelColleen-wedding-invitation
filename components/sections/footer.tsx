@@ -92,7 +92,7 @@ export function Footer() {
                   Ceremony
                 </p>
                 <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-[#7A3E3E] uppercase font-semibold">
-                  Nature&apos;s Village Resort - East Garden
+                Nature's Village Resort - Camp Edgar
                 </p>
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-[#C68484]/90 uppercase">
                   Talisay City, Negros Occidental

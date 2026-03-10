@@ -427,13 +427,12 @@ export function Details() {
                     <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] leading-relaxed" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
                       Male: <span className="font-semibold text-[#A45C5C]">Classic cream Barong with black pants</span>
                       <br />
-                      Female: <span className="font-semibold text-[#A45C5C]">Beige/khaki long gown or formal attire</span>
+                      Female: <span className="font-semibold text-[#A45C5C]">Soft Nude/Warm Beige Long Gown/Formal Attire</span>
                     </p>
                     <div className="flex items-center justify-center gap-3 sm:gap-4">
                       {[
                         { hex: "#E6CAB4", name: "Soft Nude" },
                         { hex: "#E5D4BA", name: "Warm Beige" },
-                        { hex: "#EFEBE0", name: "Light Cream" },
                       ].map(({ hex, name }) => (
                         <div key={hex} className="flex flex-col items-center gap-1">
                           <span
@@ -462,9 +461,9 @@ export function Details() {
                       Bridesmaids &amp; Groomsmen
                     </h4>
                     <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] leading-relaxed" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
-                      Bridesmaids: <span className="font-semibold text-[#A45C5C]">Champagne long gown</span>
+                      Bridesmaids: <span className="font-semibold text-[#A45C5C]">Champagne Long Gown</span>
                       <br />
-                      Groomsmen: <span className="font-semibold text-[#A45C5C]">Classic cream Barong with cream pants</span>
+                      Groomsmen: <span className="font-semibold text-[#A45C5C]">Classic Cream Barong with Cream Pants</span>
                     </p>
                   </div>
                     <div className="flex items-center justify-center gap-3 sm:gap-4">
@@ -501,7 +500,7 @@ export function Details() {
                     <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-[#7A3E3E] leading-relaxed" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
                       Semi-formal attire in soft tones of{" "}
                       <span className="font-semibold text-[#A45C5C]">
-                        pink, peach, beige, champagne, and gray
+                        Pink, Peach, Beige, Champagne, and Light Gray
                       </span>
                       .
                     </p>

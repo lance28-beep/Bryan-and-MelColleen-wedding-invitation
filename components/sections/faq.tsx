@@ -13,12 +13,12 @@ const faqItems: FAQItem[] = [
   {
     question: "When and where is the wedding?",
     answer:
-      "Ceremony will be held on Sunday, April 19, 2026, at 4:30 PM at Nature's Village Resort - East Garden, Talisay City, Negros Occidental. The reception will follow at Nature's Village Resort - Padre Pio B Function Hall at 6:00 PM.",
+      "Ceremony will be held on Sunday, April 19, 2026, at 4:30 PM at Nature's Village Resort - Camp Edgar, Talisay City, Negros Occidental. The reception will follow at Nature's Village Resort - Padre Pio B Function Hall at 6:00 PM.",
   },
   {
     question: "What is the dress code?",
     answer:
-      "Guest Attire: \nGentlemen: Formal attire in Navy Blue, Royal Blue, Gold, or White — suits and tie are most preferred. Or a long‑sleeved shirt in these shades.\nLadies: Elegant attire in Navy Blue, Royal Blue, Gold, or White — whether glittery, silky, or simply refined.\n\nPrincipal Sponsors follow the same guidelines:\n• Gentlemen: Formal attire in the wedding motif colors\n• Ladies: Elegant attire in the wedding motif colors\n\nPlease adhere to the dress code to maintain the elegance of our celebration.",
+      "Guest Attire: semi-formal attire for guestss attire in soft tones of pink, peach, beige, champagne, and light gray.",
   },
   {
     question: "When is the RSVP deadline?",
