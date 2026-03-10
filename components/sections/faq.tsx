@@ -58,7 +58,7 @@ const faqItems: FAQItem[] = [
   {
     question: "How do I get to the venue?",
     answer:
-      "You can use the 'Get Directions' button in the Event Details section to open Google Maps for easy navigation to Nature's Village Resort - East Garden (Ceremony) and Nature's Village Resort - Padre Pio B Function Hall (Reception).",
+      "You can use the 'Get Directions' button in the Event Details section to open Google Maps for easy navigation to Nature's Village Resort - Camp Edgar (Ceremony) and Nature's Village Resort - Padre Pio B Function Hall (Reception).",
   },
   {
     question: "Is there parking available?",

@@ -68,16 +68,16 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
         <div className="relative w-10 h-10 sm:w-12 sm:h-12 bg-[#EADBC8]/80 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg border border-[#D4AF37]/40">
           <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[#C68484]" />
         </div>
-        <h3 className="text-base sm:text-lg md:text-xl font-[family-name:var(--font-crimson)] font-semibold text-[#C68484] mb-2 sm:mb-3 uppercase tracking-wider">
+        <h3 className="text-base sm:text-lg md:text-xl font-[family-name:var(--font-crimson)] font-semibold text-[#ffffff] mb-2 sm:mb-3 uppercase tracking-wider">
           No Messages Yet
         </h3>
-        <p className="text-xs sm:text-sm md:text-base text-[#7A3E3E] font-[family-name:var(--font-crimson)] font-light max-w-md mx-auto leading-relaxed tracking-wide">
+        <p className="text-xs sm:text-sm md:text-base text-[#ffffff] font-[family-name:var(--font-crimson)] font-light max-w-md mx-auto leading-relaxed tracking-wide">
           Be the first to share your heartfelt wishes for the happy couple!
         </p>
         <div className="mt-4 sm:mt-6 flex justify-center">
           <div className="flex items-center gap-1.5 sm:gap-2">
             <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-[#C68484]/80" />
-            <span className="text-[10px] sm:text-xs font-[family-name:var(--font-crimson)] text-[#C68484]/80">Your message will appear here</span>
+            <span className="text-[10px] sm:text-xs font-[family-name:var(--font-crimson)] text-[#ffffff]/80">Your message will appear here</span>
             <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-[#C68484]/80" />
           </div>
         </div>
